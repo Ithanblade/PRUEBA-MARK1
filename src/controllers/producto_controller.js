@@ -11,7 +11,7 @@ const listarProductos = async (req, res) => {
 };
 
 const detalleProducto = async (req, res) => {
-    
+    //localhost:3000/productos/612f1b7b7b7b7b7b7b7b7b7b
     try {
         const { id } = req.params;
 
@@ -78,7 +78,6 @@ const crearProducto = async (req, res) => {
         res.status(201).json({ message: "Producto creado correctamente" });
 
     } catch (error) {
-        console.error("Error en crearProducto:", error);
         res.status(500).json({ message: "Error al crear el producto" });
     }
 };
